@@ -257,6 +257,12 @@ function fusion_core_form_system_theme_settings_alter(&$form, $form_state) {
       '#title' => t('Display attachment count'),
       '#default_value' => theme_get_setting('search_info_upload'),
     );
+    $form['fusion_superfish'] = array(
+	    '#type' => 'checkbox',
+	    '#title' => t('Enable Superfish Menus'),
+	    '#default_value' => $saved_settings['fusion_superfish'],
+	    '#description' => t('Check this setting to enable suppor for Superfish drop menus. NOTE: In order for the drop menu to show you MUST uncheck Primary links in the "Toggle display" settings. See README for full instructions.'),
+    );
   }
 
   // Return theme settings form
